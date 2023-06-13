@@ -206,6 +206,8 @@
             this.txtDni_C.TabIndex = 27;
             this.txtDni_C.Text = "Ingrese DNI Cliente";
             this.txtDni_C.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDni_C.Enter += new System.EventHandler(this.txtDni_C_Enter);
+            this.txtDni_C.Leave += new System.EventHandler(this.txtDni_C_Leave);
             // 
             // cmbEstadoE
             // 

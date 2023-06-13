@@ -153,7 +153,25 @@ namespace ProyectoSen
         private void btnClienteB_Click(object sender, EventArgs e)
         {
             Clases.CReporte objetoReporte = new Clases.CReporte();
-            objetoReporte.BuscarCliente(dgvReporte, txtBuscarR);
+            objetoReporte.BuscarCliente(dgvReporte, txtDni_C);
+        }
+
+        private void txtDni_C_Leave(object sender, EventArgs e)
+        {
+            if (txtDni_C.Text == "")
+            {
+                txtDni_C.Text = "Ingrese DNI Cliente";
+                txtDni_C.ForeColor = Color.LightSteelBlue;
+            }
+        }
+
+        private void txtDni_C_Enter(object sender, EventArgs e)
+        {
+            if (txtDni_C.Text == "Ingrese DNI Cliente")
+            {
+                txtDni_C.Text = "";
+                txtDni_C.ForeColor = Color.Black;
+            }
         }
     }
 }
